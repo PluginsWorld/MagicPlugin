@@ -6,7 +6,7 @@ public final class MagicPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Plugin s starting up");
+        System.out.println("Plugin is starting up");
 
     }
 
