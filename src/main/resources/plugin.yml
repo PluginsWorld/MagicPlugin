@@ -1,0 +1,7 @@
+name: MagicPlugin
+version: ${project.version}
+main: com.github.ukraine1449.magicplugin.MagicPlugin
+api-version: 1.16
+authors: [ Ukraine1449 ]
+description: A plugin to use magic tools and weapons
+website: plugins.world
