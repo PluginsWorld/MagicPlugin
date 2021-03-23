@@ -9,14 +9,15 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.MainHand;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class HammerEvent implements Listener {
     @EventHandler
     public void onHammer(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        ItemStack mainhand = player.getEquipment().getItemInMainHand();
-        if(mainhand.getItemMeta().getDisplayName() == ChatColor.RED + "The great fuck you hammer"){
+        String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+        if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
             Bukkit.broadcastMessage("Code 1119");
         }else{
             return;
