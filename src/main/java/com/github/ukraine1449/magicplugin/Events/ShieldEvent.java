@@ -31,4 +31,18 @@ public class ShieldEvent implements Listener {
             }
     }
 
+
+    @EventHandler
+    public void onShieldEquip(PlayerItemHeldEvent event){
+        if(event == null){
+            return;
+        }else{
+            Player player = event.getPlayer();
+            String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+            if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 2, 1));
+            }
+        }
+    }
+
 }
