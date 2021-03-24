@@ -2,6 +2,7 @@ package com.github.ukraine1449.magicplugin.Events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,23 +19,16 @@ public class ShieldEvent implements Listener {
                 Player player = (Player) event.getDamager();
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                 if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
-                    Bukkit.broadcastMessage("The shield has been activated");
+                    Entity target = event.getEntity();
+                    if(target instanceof Player){
+                        Player tp = (Player) target;
+                        tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
+                        tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10, 5));
+                        tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 3));
+                    }
+
                 }
             }
-    }
-
-
-    @EventHandler
-    public void onShieldEquip(PlayerItemHeldEvent event){
-        if(event == null){
-            return;
-        }else{
-            Player player = event.getPlayer();
-            String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-            if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 2, 1));
-            }
-        }
     }
 
 }
