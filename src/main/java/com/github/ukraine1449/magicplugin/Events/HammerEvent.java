@@ -27,9 +27,13 @@ public class HammerEvent implements Listener {
             double YC = player.getLocation().getY();
             Location playerloc = player.getLocation();
             List<Entity> entities = player.getNearbyEntities(3, 2, 3);
-            for(int i = 0; entities.size() > i; i++){
-                Entity entity = entities.get(i);
-                entity.setFallDistance(10);
+            if(!entities.isEmpty()){
+                for(int i = 0; entities.size() > i; i++){
+                    Entity entity = entities.get(i);
+                    entity.setFallDistance(10);
+                }
+            }else{
+                return;
             }
         }else{
             return;
