@@ -19,24 +19,34 @@ import static org.bukkit.Axis.Y;
 public class HammerEvent implements Listener {
     @EventHandler
     public void onHammer(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-        if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
-            double XC = player.getLocation().getX();
-            double ZC = player.getLocation().getZ();
-            double YC = player.getLocation().getY();
-            Location playerloc = player.getLocation();
-            List<Entity> entities = player.getNearbyEntities(3, 2, 3);
-            if(!entities.isEmpty()){
-                for(int i = 0; entities.size() > i; i++){
-                    Entity entity = entities.get(i);
-                    entity.setFallDistance(10);
-                }
-            }else{
-                return;
-            }
-        }else{
+        if (event == null){
             return;
+        }else{
+            Player player = event.getPlayer();
+            if(player.getItemInHand().getItemMeta() == null){
+                return;
+            }else{
+                String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+                if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
+                    double XC = player.getLocation().getX();
+                    double ZC = player.getLocation().getZ();
+                    double YC = player.getLocation().getY();
+                    Location playerloc = player.getLocation();
+                    List<Entity> entities = player.getNearbyEntities(3, 2, 3);
+                    if(!entities.isEmpty()){
+                        for(int i = 0; entities.size() > i; i++){
+                            Entity entity = entities.get(i);
+                            entity.setFallDistance(10);
+                        }
+                    }else{
+                        return;
+                    }
+                }else if (mainhand == null){
+                    return;
+                }else{
+                    return;
+                }
+            }
         }
     }
 
