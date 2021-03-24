@@ -19,9 +19,15 @@ public class HammerEvent implements Listener {
         Player player = event.getPlayer();
         String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
         if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
-            int XC = player.getLocation().getBlockX();
-            int ZC = player.getLocation().getBlockZ();
-            int YC = player.getLocation().getBlockY();
+            double XC = player.getLocation().getX();
+            double ZC = player.getLocation().getZ();
+            double YC = player.getLocation().getY();
+            double xp = XC+1;
+            double xm = XC-1;
+            double ZP = ZC+1;
+            double ZM = ZC-1;
+
+
         }else{
             return;
         }
