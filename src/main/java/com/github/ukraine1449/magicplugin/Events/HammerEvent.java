@@ -1,17 +1,20 @@
 package com.github.ukraine1449.magicplugin.Events;
 
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerItemDamageEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.MainHand;
-import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.util.BoundingBox;
+
+import java.util.List;
+
+import static org.bukkit.Axis.Y;
 
 public class HammerEvent implements Listener {
     @EventHandler
@@ -22,12 +25,12 @@ public class HammerEvent implements Listener {
             double XC = player.getLocation().getX();
             double ZC = player.getLocation().getZ();
             double YC = player.getLocation().getY();
-            double xp = XC+1;
-            double xm = XC-1;
-            double ZP = ZC+1;
-            double ZM = ZC-1;
-
-
+            Location playerloc = player.getLocation();
+            List<Entity> entities = player.getNearbyEntities(3, 2, 3);
+            for(int i = 0; entities.size() > i; i++){
+                Entity entity = entities.get(i);
+                entity.setFallDistance(10);
+            }
         }else{
             return;
         }
