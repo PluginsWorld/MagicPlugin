@@ -26,8 +26,6 @@ public class Shield implements CommandExecutor {
                 shield.addUnsafeEnchantment(Enchantment.KNOCKBACK, 5);
                 Inventory pi = player.getInventory();
                 pi.addItem(shield);
-
-
             }
         }
 
