@@ -8,3 +8,5 @@ website: plugins.world
 commands:
   hammer:
     description: gives you the "Fuck you" hammer
+  shield:
+    description: gives you the shield of darknesss
