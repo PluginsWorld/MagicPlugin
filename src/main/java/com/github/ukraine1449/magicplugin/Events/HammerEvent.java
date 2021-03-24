@@ -2,6 +2,7 @@ package com.github.ukraine1449.magicplugin.Events;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +19,9 @@ public class HammerEvent implements Listener {
         Player player = event.getPlayer();
         String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
         if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
-            Bukkit.broadcastMessage("Code 1119");
+            int XC = player.getLocation().getBlockX();
+            int ZC = player.getLocation().getBlockZ();
+            int YC = player.getLocation().getBlockY();
         }else{
             return;
         }
