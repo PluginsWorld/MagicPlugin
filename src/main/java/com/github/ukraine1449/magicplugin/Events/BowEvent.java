@@ -39,9 +39,9 @@ private int cooldowntime = 30;
                             }else{
                                 if(damaged instanceof Player){
                                     Player tp = (Player) damaged;
-                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 30, 5));
-                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 30, 3));
-                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 1, 5));
+                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 600, 5));
+                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 600, 3));
+                                    tp.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 20, 5));
                                 }else{
                                     return;
                                 }
