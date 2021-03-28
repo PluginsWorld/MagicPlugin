@@ -17,17 +17,23 @@ public class ShieldEvent implements Listener {
     public void onShieldUse(EntityDamageByEntityEvent event){
             if(event.getDamager() instanceof Player){
                 Player player = (Player) event.getDamager();
-                String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-                if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
-                    Entity target = event.getEntity();
-                    if(target instanceof Player){
-                        Player tp = (Player) target;
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10, 5));
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 3));
-                    }
+                if(player.getItemInHand().getItemMeta() == null){
 
+                }else{
+                    String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+                    if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
+                        Entity target = event.getEntity();
+                        if(target instanceof Player){
+                            Player tp = (Player) target;
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 3));
+                        }
+
+                    }
                 }
+            }else{
+                return;
             }
     }
 
