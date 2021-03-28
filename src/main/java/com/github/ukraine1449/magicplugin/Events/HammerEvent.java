@@ -28,10 +28,6 @@ public class HammerEvent implements Listener {
             }else{
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                 if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
-                    double XC = player.getLocation().getX();
-                    double ZC = player.getLocation().getZ();
-                    double YC = player.getLocation().getY();
-                    Location playerloc = player.getLocation();
                     List<Entity> entities = player.getNearbyEntities(3, 2, 3);
                     if(!entities.isEmpty()){
                         for(int i = 0; entities.size() > i; i++){
