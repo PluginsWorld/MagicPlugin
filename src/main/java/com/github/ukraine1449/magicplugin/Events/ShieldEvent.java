@@ -25,9 +25,9 @@ public class ShieldEvent implements Listener {
                         Entity target = event.getEntity();
                         if(target instanceof Player){
                             Player tp = (Player) target;
-                            tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10, 5));
-                            tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10, 5));
-                            tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 3));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 200, 3));
                         }
 
                     }
