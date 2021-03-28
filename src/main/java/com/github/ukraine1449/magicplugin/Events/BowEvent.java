@@ -31,12 +31,6 @@ private int cooldowntime = 30;
 
                     String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                     if(mainhand.equals(ChatColor.LIGHT_PURPLE + "Cupid's Bow")){
-                        if(cooldown.containsKey(player.getUniqueId())){
-                            long secondsleft = ((cooldown.get(player.getUniqueId())/1000) + cooldowntime) - (System.currentTimeMillis()/1000);
-                            if(secondsleft > 0){
-                                event.setCancelled(true);
-                                player.sendMessage("You are still on cooldown. There are " + secondsleft + " secconds left");
-                            }else{
                                 if(damaged instanceof Player){
                                     Player tp = (Player) damaged;
                                     tp.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 600, 5));
@@ -45,8 +39,6 @@ private int cooldowntime = 30;
                                 }else{
                                     return;
                                 }
-                            }
-                        }
                     }else if (mainhand == null){
                         return;
                     }else{
