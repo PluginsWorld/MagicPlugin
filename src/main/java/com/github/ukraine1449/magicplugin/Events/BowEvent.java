@@ -28,26 +28,29 @@ private int cooldowntime = 30;
                 if(player.getItemInHand().getItemMeta() == null){
                     return;
                 }else{
-                    if(cooldown.containsKey(player.getUniqueId())){
-                        long secondsleft = ((cooldown.get(player.getUniqueId())/1000) + cooldowntime) - (System.currentTimeMillis()/1000);
-                        if(secondsleft > 0){
-                            event.setCancelled(true);
-                            player.sendMessage("You cannot use this bow for another " + secondsleft + " secconds");
-                        }else{
-                            String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-                            if(mainhand.equals(ChatColor.LIGHT_PURPLE + "Cupid's Bow")){
+
+                    String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+                    if(mainhand.equals(ChatColor.LIGHT_PURPLE + "Cupid's Bow")){
+                        if(cooldown.containsKey(player.getUniqueId())){
+                            long secondsleft = ((cooldown.get(player.getUniqueId())/1000) + cooldowntime) - (System.currentTimeMillis()/1000);
+                            if(secondsleft > 0){
+                                event.setCancelled(true);
+                                player.sendMessage("You are still on cooldown. There are " + secondsleft + " secconds left");
+                            }else{
                                 if(damaged instanceof Player){
                                     Player tp = (Player) damaged;
                                     tp.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 30, 5));
                                     tp.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 30, 3));
                                     tp.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 1, 5));
+                                }else{
+                                    return;
                                 }
-                            }else if (mainhand == null){
-                                return;
-                            }else{
-                                return;
                             }
                         }
+                    }else if (mainhand == null){
+                        return;
+                    }else{
+                        return;
                     }
                 }
                 }else{
