@@ -10,3 +10,5 @@ commands:
     description: gives you the "Fuck you" hammer
   shield:
     description: gives you the shield of darknesss
+  bow:
+    description: gives you Cupids bow
