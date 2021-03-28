@@ -8,8 +8,6 @@ import com.github.ukraine1449.magicplugin.Events.HammerEvent;
 import com.github.ukraine1449.magicplugin.Events.ShieldEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Timer;
-
 public final class MagicPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
@@ -25,9 +23,6 @@ public final class MagicPlugin extends JavaPlugin {
         getCommand("shield").setExecutor(new Shield());
         getCommand("bow").setExecutor(new Bow());
     }
-        public static void Cooldown(){
-        Timer timer;
-        }
     @Override
     public void onDisable() {
 
