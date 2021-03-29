@@ -12,3 +12,5 @@ commands:
     description: gives you the shield of darknesss
   bow:
     description: gives you Cupids bow
+  EH:
+    description: Helmet that lets you see people within 10 blocks
