@@ -18,7 +18,7 @@ public class ShieldEvent implements Listener {
             if(event.getDamager() instanceof Player){
                 Player player = (Player) event.getDamager();
                 if(player.getItemInHand().getItemMeta() == null){
-
+                    return;
                 }else{
                     String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                     if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
