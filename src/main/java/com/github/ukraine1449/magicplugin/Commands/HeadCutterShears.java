@@ -20,7 +20,7 @@ public class HeadCutterShears implements CommandExecutor {
             if(player.hasPermission("Magic.Bow")){
                 ItemStack shears = new ItemStack(Material.SHEARS);
                 ItemMeta bm = shears.getItemMeta();
-                bm.setDisplayName(ChatColor.RED + "guillotine");
+                bm.setDisplayName(ChatColor.RED + "Guillotine");
                 shears.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
                 playerinv.addItem(shears);
