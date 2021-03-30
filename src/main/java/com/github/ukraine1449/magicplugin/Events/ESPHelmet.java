@@ -19,7 +19,7 @@ public class ESPHelmet implements Listener {
         if(player.getEquipment().getChestplate().getItemMeta() == null){
             return;
         }else{
-            String Helmet = player.getEquipment().getChestplate().getItemMeta().getDisplayName();
+            String Helmet = player.getEquipment().getHelmet().getItemMeta().getDisplayName();
             if(Helmet.equals(ChatColor.BLUE + "The all seeing helmet")){
                 List<Entity> entities = player.getNearbyEntities(10, 3, 10);
                 if(!entities.isEmpty()){
