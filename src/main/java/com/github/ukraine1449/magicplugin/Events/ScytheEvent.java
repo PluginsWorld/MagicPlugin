@@ -20,13 +20,13 @@ public class ScytheEvent implements Listener {
                 return;
             }else{
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-                if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
+                if(mainhand.equals(ChatColor.BLACK + "Death's scythe")){
                     Entity target = event.getEntity();
                     if(target instanceof Player){
                         Player tp = (Player) target;
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 5));
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5));
-                        tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 200, 3));
+                        tp.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 72000, 8));
+                        tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 72000, 1));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 120, 10));
                     }
 
                 }
