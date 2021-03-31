@@ -27,7 +27,6 @@ public class ShieldEvent implements Listener {
                             tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5));
                             tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 200, 3));
                         }
-
                     }
                 }
             }else{
