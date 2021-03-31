@@ -18,3 +18,5 @@ commands:
     description: gives you the shears of head cutting
   scythe:
     description: gives you deaths scythe
+  boombow:
+    description: gives you a bow which explodes stuff
