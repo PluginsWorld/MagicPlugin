@@ -18,7 +18,7 @@ public class ShearsEvent implements Listener {
         Player player = event.getEntity();
         if(player.getKiller() instanceof Player){
             Player killer = player.getKiller();
-            if(killer.getEquipment().getChestplate().getItemMeta() == null){
+            if(killer.getItemInHand().getItemMeta() == null){
                 return;
             }else{
                 String mainhand = killer.getEquipment().getItemInHand().getItemMeta().getDisplayName();
