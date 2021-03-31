@@ -16,7 +16,7 @@ public class ESPHelmet implements Listener {
     @EventHandler
     public void EH(PlayerMoveEvent event){
         Player player = event.getPlayer();
-        if(player.getEquipment().getChestplate().getItemMeta() == null){
+        if(player.getEquipment().getHelmet() == null){
             return;
         }else{
             String Helmet = player.getEquipment().getHelmet().getItemMeta().getDisplayName();
