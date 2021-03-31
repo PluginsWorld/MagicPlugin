@@ -21,6 +21,7 @@ public class HelmetOfVision implements CommandExecutor {
                 ItemMeta hm = helmet.getItemMeta();
                 hm.setDisplayName(ChatColor.BLUE + "The all seeing helmet");
                 helmet.setItemMeta(hm);
+                player.getInventory().addItem(helmet);
             }
         }
 
