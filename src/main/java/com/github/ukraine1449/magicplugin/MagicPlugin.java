@@ -15,8 +15,13 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ESPHelmet(), this);
         getServer().getPluginManager().registerEvents(new ShearsEvent(), this);
         getServer().getPluginManager().registerEvents(new ScytheEvent(), this);
+        getServer().getPluginManager().registerEvents(new ExplosiveBowEvent(), this);
 
 
+
+
+
+        getCommand("boombow").setExecutor(new ExplosiveBow());
         getCommand("scythe").setExecutor(new Scythe());
         getCommand("shears").setExecutor(new HeadCutterShears());
         getCommand("EH").setExecutor(new HelmetOfVision());
