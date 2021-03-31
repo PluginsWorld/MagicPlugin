@@ -14,3 +14,7 @@ commands:
     description: gives you Cupids bow
   EH:
     description: Helmet that lets you see people within 10 blocks
+  shears:
+    description: gives you the shears of head cutting
+  scythe:
+    description: gives you deaths scythe
