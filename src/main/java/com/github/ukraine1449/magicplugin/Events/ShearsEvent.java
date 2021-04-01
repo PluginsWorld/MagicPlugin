@@ -26,6 +26,8 @@ public class ShearsEvent implements Listener {
                     ItemStack playerhead = new ItemStack(Material.PLAYER_HEAD);
                     SkullMeta phm = (SkullMeta) playerhead.getItemMeta();
                     phm.setOwningPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()));
+                    playerhead.setItemMeta(phm);
+                    killer.getInventory().addItem(playerhead);
 
 
 
