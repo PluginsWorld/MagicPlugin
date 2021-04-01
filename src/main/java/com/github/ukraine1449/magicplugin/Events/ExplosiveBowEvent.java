@@ -39,14 +39,6 @@ public class ExplosiveBowEvent implements Listener {
                         return;
                     }
                 }
-
-
-
-
-
-
-
-
             }else{
                 return;
             }
