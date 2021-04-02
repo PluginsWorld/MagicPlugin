@@ -20,3 +20,5 @@ commands:
     description: gives you deaths scythe
   boombow:
     description: gives you a bow which explodes stuff
+  invis:
+    description: Gives invisibility armor
