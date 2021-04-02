@@ -40,14 +40,14 @@ public class Invis implements CommandExecutor {
                 LeatherArmorMeta lm = (LeatherArmorMeta) leggings.getItemMeta();
                 lm.setDisplayName(ChatColor.BLACK + "Spy's pants");
                 lm.setColor(Color.BLACK);
-                head.setItemMeta(lm);
+                leggings.setItemMeta(lm);
                 pi.addItem(leggings);
 
                 ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
                 LeatherArmorMeta bm = (LeatherArmorMeta) boots.getItemMeta();
                 bm.setDisplayName(ChatColor.BLACK + "Spy's sneaky boots");
                 bm.setColor(Color.BLACK);
-                head.setItemMeta(bm);
+                boots.setItemMeta(bm);
                 pi.addItem(boots);
 
             }
