@@ -22,7 +22,7 @@ public class ZeusBowEvent implements Listener {
                     return;
                 }else{
                     String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-                    if(mainhand.equals(ChatColor.RED + "Boom bow")){
+                    if(mainhand.equals(ChatColor.BOLD + "Zeus's bow")){
 
                         World w = player.getWorld();
                         if(event.getHitBlock() == null){
@@ -32,9 +32,6 @@ public class ZeusBowEvent implements Listener {
                             w.strikeLightning(loc);
                             event.getEntity().remove();
                         }
-
-
-
                     }else{
                         return;
                     }
