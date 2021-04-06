@@ -14,8 +14,6 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class BowEvent implements Listener {
-public HashMap<UUID,Long> cooldown = new HashMap<UUID, Long>();
-private int cooldowntime = 30;
 
 
     @EventHandler
