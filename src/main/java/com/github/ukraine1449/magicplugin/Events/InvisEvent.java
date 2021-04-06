@@ -3,15 +3,10 @@ package com.github.ukraine1449.magicplugin.Events;
 import com.github.ukraine1449.magicplugin.MagicPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
-import java.util.List;
 
 public class InvisEvent implements Listener {
 MagicPlugin plugin;
