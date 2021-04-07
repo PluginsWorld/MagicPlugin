@@ -5,12 +5,13 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class MineEvent implements Listener {
-
+    @EventHandler
     public void onPlayerStep(PlayerInteractEvent event){
         Player player = event.getPlayer();
         ItemStack mine = new ItemStack(Material.PAINTING);
