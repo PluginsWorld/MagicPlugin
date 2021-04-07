@@ -10,6 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class HeadCutterShears implements CommandExecutor {
 
     @Override
@@ -21,6 +23,10 @@ public class HeadCutterShears implements CommandExecutor {
                 ItemStack shears = new ItemStack(Material.SHEARS);
                 ItemMeta bm = shears.getItemMeta();
                 bm.setDisplayName(ChatColor.RED + "Guillotine");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.DARK_PURPLE + "The french Guillotine");
+                lore.add(ChatColor.DARK_PURPLE + "Kill someone with this to get their head");
+                bm.setLore(lore);
                 shears.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
                 playerinv.addItem(shears);

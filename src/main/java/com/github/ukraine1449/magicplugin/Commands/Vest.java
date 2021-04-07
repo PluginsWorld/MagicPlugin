@@ -10,6 +10,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class Vest implements CommandExecutor {
 
     @Override
@@ -21,6 +23,10 @@ public class Vest implements CommandExecutor {
                 ItemStack vest = new ItemStack(Material.IRON_CHESTPLATE);
                 ItemMeta vm = vest.getItemMeta();
                 vm.setDisplayName(ChatColor.RED + "Suicide bomber vest");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.AQUA + "A vest with explosives strapped to it");
+                lore.add(ChatColor.RED + "Tanerite ammount: 10kg");
+                vm.setLore(lore);
                 vest.setItemMeta(vm);
                 player.getInventory().addItem(vest);
             }

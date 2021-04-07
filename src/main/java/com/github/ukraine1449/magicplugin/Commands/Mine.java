@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class Mine implements CommandExecutor {
 
     @Override
@@ -20,7 +22,12 @@ public class Mine implements CommandExecutor {
                 ItemStack mine = new ItemStack(Material.PAINTING);
                 ItemMeta mm = mine.getItemMeta();
                 mm.setDisplayName(ChatColor.BLACK + "Mine");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.BLUE + "An antipersonel trap");
+                lore.add(ChatColor.BLUE + "On interact it will explode");
+                mm.setLore(lore);
                 mine.setItemMeta(mm);
+                player.getInventory().addItem(mine);
             }
         }
 

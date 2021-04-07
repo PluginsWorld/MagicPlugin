@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class HelmetOfVision implements CommandExecutor {
 
     @Override
@@ -20,6 +22,9 @@ public class HelmetOfVision implements CommandExecutor {
                 ItemStack helmet = new ItemStack(Material.CHAINMAIL_HELMET);
                 ItemMeta hm = helmet.getItemMeta();
                 hm.setDisplayName(ChatColor.BLUE + "The all seeing helmet");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.BLUE + "Wear this to give players around you glowing");
+                hm.setLore(lore);
                 helmet.setItemMeta(hm);
                 player.getInventory().addItem(helmet);
             }

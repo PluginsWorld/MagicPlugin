@@ -11,6 +11,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
+import java.util.ArrayList;
+
 public class Invis implements CommandExecutor {
 
     @Override
@@ -26,6 +28,10 @@ public class Invis implements CommandExecutor {
                 LeatherArmorMeta hm = (LeatherArmorMeta) head.getItemMeta();
                 hm.setDisplayName(ChatColor.BLACK + "Spy's hat");
                 hm.setColor(Color.BLACK);
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.BOLD + "Wear the full set of spies gear");
+                lore.add(ChatColor.BOLD + "and crouch to become invisible");
+                hm.setLore(lore);
                 head.setItemMeta(hm);
                 pi.addItem(head);
 
@@ -33,6 +39,7 @@ public class Invis implements CommandExecutor {
                 LeatherArmorMeta cm = (LeatherArmorMeta) chesplate.getItemMeta();
                 cm.setDisplayName(ChatColor.BLACK + "Spy's jacket");
                 cm.setColor(Color.BLACK);
+                cm.setLore(lore);
                 chesplate.setItemMeta(cm);
                 pi.addItem(chesplate);
 
@@ -40,6 +47,7 @@ public class Invis implements CommandExecutor {
                 LeatherArmorMeta lm = (LeatherArmorMeta) leggings.getItemMeta();
                 lm.setDisplayName(ChatColor.BLACK + "Spy's pants");
                 lm.setColor(Color.BLACK);
+                lm.setLore(lore);
                 leggings.setItemMeta(lm);
                 pi.addItem(leggings);
 
@@ -47,6 +55,7 @@ public class Invis implements CommandExecutor {
                 LeatherArmorMeta bm = (LeatherArmorMeta) boots.getItemMeta();
                 bm.setDisplayName(ChatColor.BLACK + "Spy's sneaky boots");
                 bm.setColor(Color.BLACK);
+                bm.setLore(lore);
                 boots.setItemMeta(bm);
                 pi.addItem(boots);
 

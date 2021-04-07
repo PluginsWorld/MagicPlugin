@@ -10,6 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class Hammer implements CommandExecutor {
 
     @Override
@@ -20,6 +22,9 @@ public class Hammer implements CommandExecutor {
                 ItemStack hammer = new ItemStack(Material.WOODEN_AXE);
                 ItemMeta hm = hammer.getItemMeta();
                 hm.setDisplayName(ChatColor.RED + "The great fuck you hammer");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.DARK_GREEN + "The hammer of the gods. Damages everything in a small radius around you");
+                hm.setLore(lore);
                 hammer.setItemMeta(hm);
                 Inventory pi = player.getInventory();
                 pi.addItem(hammer);

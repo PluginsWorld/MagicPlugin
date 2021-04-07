@@ -10,6 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class Bow implements CommandExecutor {
 
     @Override
@@ -21,6 +23,10 @@ public class Bow implements CommandExecutor {
                 ItemStack bow = new ItemStack(Material.BOW);
                 ItemMeta bm = bow.getItemMeta();
                 bm.setDisplayName(ChatColor.LIGHT_PURPLE + "Cupid's Bow");
+
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.LIGHT_PURPLE + "The bow of cupid. Go help someone");
+                bm.setLore(lore);
                 bow.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
                 playerinv.addItem(bow);

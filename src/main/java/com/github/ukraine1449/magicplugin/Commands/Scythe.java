@@ -10,6 +10,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 public class Scythe implements CommandExecutor {
 
     @Override
@@ -21,6 +23,9 @@ public class Scythe implements CommandExecutor {
                 ItemStack scythe = new ItemStack(Material.NETHERITE_HOE);
                 ItemMeta sm = scythe.getItemMeta();
                 sm.setDisplayName(ChatColor.BLACK + "Death's scythe");
+                ArrayList<String> lore = new ArrayList();
+                lore.add(ChatColor.BLUE + "Hit someone with this to give them blindness and withering");
+                sm.setLore(lore);
                 scythe.setItemMeta(sm);
                 Inventory pi = player.getInventory();
                 pi.addItem(scythe);
