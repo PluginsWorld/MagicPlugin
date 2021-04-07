@@ -8,6 +8,7 @@ website: plugins.world
 commands:
   hammer:
     description: gives you the "Fuck you" hammer
+    permission: Magic.hammer
   shield:
     description: gives you the shield of darknesss
   bow:
@@ -22,3 +23,11 @@ commands:
     description: gives you a bow which explodes stuff
   invis:
     description: Gives invisibility armor
+  zeus:
+    description: Gives you zeuses bow
+  Mine:
+    description: Gives you a mine
+  BoomStick:
+    description: Gives you an explosive stick
+  Vest:
+    description: gives you the suicide bomber vest
