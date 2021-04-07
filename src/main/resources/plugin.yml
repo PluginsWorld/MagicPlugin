@@ -31,3 +31,5 @@ commands:
     description: Gives you an explosive stick
   Vest:
     description: gives you the suicide bomber vest
+  vestBig:
+    description: A bigger suicide bomber vest
