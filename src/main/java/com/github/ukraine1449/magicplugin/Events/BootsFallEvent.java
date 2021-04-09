@@ -20,7 +20,7 @@ public class BootsFallEvent implements Listener {
             return;
         }else{
             String Boots = player.getEquipment().getBoots().getItemMeta().getDisplayName();
-            if(Boots.equals(ChatColor.BLUE + "The all seeing helmet")){
+            if(Boots.equals(ChatColor.BOLD + "Pillow boots")){
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 60, 1));
             }else if (Boots == null){
                 return;
