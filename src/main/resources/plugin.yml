@@ -33,3 +33,5 @@ commands:
     description: gives you the suicide bomber vest
   vestBig:
     description: A bigger suicide bomber vest
+  boots:
+    description: gives you slow falling boots

@@ -26,10 +26,10 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new VestEvent(), this);
         getServer().getPluginManager().registerEvents(new BoomStickEvent(), this);
         getServer().getPluginManager().registerEvents(new VestBigEvent(), this);
+        getServer().getPluginManager().registerEvents(new BootsFallEvent(), this);
 
 
-
-
+        getCommand("boots").setExecutor(new PillowBoots());
         getCommand("vestBig").setExecutor(new Vest());
         getCommand("Vest").setExecutor(new Vest());
         getCommand("BoomStick").setExecutor(new BoomStick());
