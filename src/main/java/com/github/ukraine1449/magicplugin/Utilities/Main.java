@@ -49,10 +49,27 @@ public class Main {
             System.out.println("an Item has been chosen");
             Random ran = new Random();
             int rn = random.nextInt(100);
+            int rt = random.nextInt(100);
             if(rn < 50){
                 System.out.println("attack");
+                if (rt < 50) {
+                    System.out.println("The item is direct attack");
+                }else{
+                    System.out.println("The item has indirect attack");
+                    int rnn = random.nextInt(100);
+                    if(rnn < 50){
+                        System.out.println("The item is a ranged weapon");
+                    }else{
+                        System.out.println("the item is an effects weapon");
+                    }
+                }
             }else{
                 System.out.println("utillity");
+                if (rt < 50) {
+                    System.out.println("The item is used for building");
+                }else{
+                    System.out.println("The item is used for destruction");
+                }
             }
         }
     }
