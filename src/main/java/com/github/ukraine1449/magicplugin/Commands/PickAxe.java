@@ -25,6 +25,7 @@ public class PickAxe implements CommandExecutor {
                 lore.add(ChatColor.GOLD + "Use this to mine large ammounts of block");
                 lore.add(ChatColor.AQUA + "It has an *explosive* surprise :)");
                 pm.setLore(lore);
+                pick.setItemMeta(pm);
                 player.getInventory().addItem(pick);
             }
         }

@@ -25,6 +25,7 @@ public class SlowStick implements CommandExecutor {
                 ArrayList<String> lore = new ArrayList();
                 lore.add(ChatColor.BOLD + "A stick to give opponenets slowness");
                 sm.setLore(lore);
+                stick.setItemMeta(sm);
                 player.getInventory().addItem(stick);
             }
         }
