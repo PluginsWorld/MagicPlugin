@@ -37,3 +37,5 @@ commands:
     description: gives you slow falling boots
   pickaxe:
     description: Gives you an explosive pickaxe
+  slowStick:
+    description: gives you stick to make people slow
