@@ -27,6 +27,25 @@ public class LevitationBoots implements CommandExecutor {
                 wm.setLore(lore);
                 wings.setItemMeta(wm);
                 player.getInventory().addItem(wings);
+
+
+                ItemStack activator = new ItemStack(Material.FEATHER);
+                ItemMeta am = activator.getItemMeta();
+                am.setDisplayName(ChatColor.BLUE + "Wings activator");
+                ArrayList<String> activatorlore = new ArrayList();
+                lore.add(ChatColor.BLUE + "Drop this to activate wings");
+                am.setLore(activatorlore);
+                activator.setItemMeta(am);
+                player.getInventory().addItem(activator);
+
+                ItemStack deactivator = new ItemStack(Material.OBSIDIAN);
+                ItemMeta dm = deactivator.getItemMeta();
+                dm.setDisplayName(ChatColor.RED + "Wings de-activator");
+                ArrayList<String> deactivatorlore = new ArrayList();
+                lore.add(ChatColor.RED + "Drop this to de-activate wings");
+                dm.setLore(deactivatorlore);
+                deactivator.setItemMeta(dm);
+                player.getInventory().addItem(deactivator);
             }
         }
 
