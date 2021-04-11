@@ -35,3 +35,5 @@ commands:
     description: A bigger suicide bomber vest
   boots:
     description: gives you slow falling boots
+  pickaxe:
+    description: Gives you an explosive pickaxe
