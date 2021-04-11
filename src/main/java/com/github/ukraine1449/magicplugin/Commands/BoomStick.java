@@ -29,6 +29,8 @@ public class BoomStick implements CommandExecutor {
                 sm.setLore(lore);
                 stick.setItemMeta(sm);
                 player.getInventory().addItem(stick);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.BoomStick");
             }
         }
 

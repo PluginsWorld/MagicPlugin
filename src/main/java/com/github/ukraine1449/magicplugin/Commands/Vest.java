@@ -29,6 +29,8 @@ public class Vest implements CommandExecutor {
                 vm.setLore(lore);
                 vest.setItemMeta(vm);
                 player.getInventory().addItem(vest);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.vest");
             }
         }
 

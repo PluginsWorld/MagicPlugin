@@ -29,6 +29,8 @@ public class Scythe implements CommandExecutor {
                 scythe.setItemMeta(sm);
                 Inventory pi = player.getInventory();
                 pi.addItem(scythe);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.scythe");
             }
         }
 

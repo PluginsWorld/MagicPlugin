@@ -28,6 +28,8 @@ public class Mine implements CommandExecutor {
                 mm.setLore(lore);
                 mine.setItemMeta(mm);
                 player.getInventory().addItem(mine);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.mine");
             }
         }
 

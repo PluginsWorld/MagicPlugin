@@ -19,7 +19,7 @@ public class HeadCutterShears implements CommandExecutor {
 
         if(sender instanceof Player){
             Player player = (Player) sender;
-            if(player.hasPermission("Magic.Bow")){
+            if(player.hasPermission("Magic.Guillotine")){
                 ItemStack shears = new ItemStack(Material.SHEARS);
                 ItemMeta bm = shears.getItemMeta();
                 bm.setDisplayName(ChatColor.RED + "Guillotine");
@@ -30,6 +30,8 @@ public class HeadCutterShears implements CommandExecutor {
                 shears.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
                 playerinv.addItem(shears);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Guillotine");
             }
         }
 

@@ -32,6 +32,8 @@ public class Shield implements CommandExecutor {
                 shield.addUnsafeEnchantment(Enchantment.KNOCKBACK, 5);
                 Inventory pi = player.getInventory();
                 pi.addItem(shield);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.spawnShield");
             }
         }
 

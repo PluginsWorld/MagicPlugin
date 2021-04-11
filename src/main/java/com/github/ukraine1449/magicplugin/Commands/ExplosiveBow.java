@@ -34,6 +34,8 @@ public class ExplosiveBow implements CommandExecutor {
                 player.getInventory().addItem(bow);
 
 
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.ExB");
             }
         }
 

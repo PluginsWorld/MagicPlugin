@@ -27,6 +27,8 @@ public class PickAxe implements CommandExecutor {
                 pm.setLore(lore);
                 pick.setItemMeta(pm);
                 player.getInventory().addItem(pick);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Pickaxe");
             }
         }
 

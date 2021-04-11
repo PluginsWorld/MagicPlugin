@@ -28,6 +28,8 @@ public class Hammer implements CommandExecutor {
                 hammer.setItemMeta(hm);
                 Inventory pi = player.getInventory();
                 pi.addItem(hammer);
+            }else{
+                player.sendMessage(org.bukkit.ChatColor.GOLD + "Please get the permission called; Magic.spawnHammer");
             }
         }
 

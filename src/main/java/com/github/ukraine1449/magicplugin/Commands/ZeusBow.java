@@ -27,6 +27,8 @@ public class ZeusBow implements CommandExecutor {
                 bm.setLore(lore);
                 bow.setItemMeta(bm);
                 player.getInventory().addItem(bow);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Zeus");
             }
         }
 

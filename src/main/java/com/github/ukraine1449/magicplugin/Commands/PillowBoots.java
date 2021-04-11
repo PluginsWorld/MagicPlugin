@@ -28,10 +28,8 @@ public class PillowBoots implements CommandExecutor {
                 bm.setLore(lore);
                 boots.setItemMeta(bm);
                 player.getInventory().addItem(boots);
-
-
-
-
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Pillow");
             }
         }
 

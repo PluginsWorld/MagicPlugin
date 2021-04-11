@@ -30,6 +30,8 @@ public class Bow implements CommandExecutor {
                 bow.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
                 playerinv.addItem(bow);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Bow");
             }
         }
 

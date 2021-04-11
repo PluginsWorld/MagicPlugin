@@ -59,6 +59,8 @@ public class Invis implements CommandExecutor {
                 boots.setItemMeta(bm);
                 pi.addItem(boots);
 
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.invis");
             }
         }
 

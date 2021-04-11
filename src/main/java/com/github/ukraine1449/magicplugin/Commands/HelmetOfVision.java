@@ -27,6 +27,8 @@ public class HelmetOfVision implements CommandExecutor {
                 hm.setLore(lore);
                 helmet.setItemMeta(hm);
                 player.getInventory().addItem(helmet);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.EH");
             }
         }
 

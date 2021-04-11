@@ -46,6 +46,8 @@ public class LevitationBoots implements CommandExecutor {
                 dm.setLore(deactivatorlore);
                 deactivator.setItemMeta(dm);
                 player.getInventory().addItem(deactivator);
+            }else{
+                player.sendMessage(ChatColor.GOLD + "Please get the permission called; Magic.Flying");
             }
         }
 
