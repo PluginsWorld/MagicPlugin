@@ -22,7 +22,7 @@ public class BoomStickEvent implements Listener {
                 if(mainhand.equals(ChatColor.RED + "Boom Stick")){
 
                     World w = player.getWorld();
-                        Location loc = player.getLocation();
+                        Location loc = event.getEntity().getLocation();
                         w.createExplosion(loc, 2, false);
                         player.getEquipment().setItemInMainHand(null);
                 }

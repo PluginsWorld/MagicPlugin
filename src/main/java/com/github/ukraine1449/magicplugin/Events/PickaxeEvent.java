@@ -20,7 +20,7 @@ public class PickaxeEvent implements Listener {
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                 if(mainhand.equals(ChatColor.GOLD + "Excavator")){
 
-                    Location loc = event.getBlock().getLocation();
+                    Location loc = event.getPlayer().getLocation();
                     World w = player.getWorld();
                     w.createExplosion(loc, 2, false);
                 }else{

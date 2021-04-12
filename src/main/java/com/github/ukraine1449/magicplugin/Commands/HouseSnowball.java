@@ -19,7 +19,7 @@ public class HouseSnowball implements CommandExecutor {
         if(sender instanceof Player){
             Player player = (Player) sender;
             if(player.hasPermission("Magic.instaHouse")){
-                ItemStack snowball = new ItemStack(Material.SNOWBALL);
+                ItemStack snowball = new ItemStack(Material.BRICK);
                 ItemMeta sm = snowball.getItemMeta();
                 sm.setDisplayName(ChatColor.DARK_GREEN + "Porta-house");
                 ArrayList<String> lore = new ArrayList();

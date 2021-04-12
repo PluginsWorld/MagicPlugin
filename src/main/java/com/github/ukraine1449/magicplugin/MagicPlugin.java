@@ -31,13 +31,18 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SlowStickEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeathEvent(), this);
         getServer().getPluginManager().registerEvents(new LevitationBootsEvent(), this);
+        getServer().getPluginManager().registerEvents(new SnowBallHitEvent(), this);
+        getServer().getPluginManager().registerEvents(new onMinePlace(), this);
+
+
+
 
         getCommand("house").setExecutor(new HouseSnowball());
         getCommand("wings").setExecutor(new LevitationBoots());
         getCommand("slowStick").setExecutor(new SlowStick());
         getCommand("Pickaxe").setExecutor(new PickAxe());
         getCommand("boots").setExecutor(new PillowBoots());
-        getCommand("vestBig").setExecutor(new Vest());
+        getCommand("vestBig").setExecutor(new VestBig());
         getCommand("Vest").setExecutor(new Vest());
         getCommand("BoomStick").setExecutor(new BoomStick());
         getCommand("Zeus").setExecutor(new ZeusBow());
@@ -51,11 +56,8 @@ public final class MagicPlugin extends JavaPlugin {
         getCommand("shield").setExecutor(new Shield());
         getCommand("bow").setExecutor(new Bow());
     }
-
-
     @Override
     public void onDisable() {
 
     }
-
 }
