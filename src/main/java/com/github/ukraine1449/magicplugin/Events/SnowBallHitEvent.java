@@ -1,7 +1,6 @@
 package com.github.ukraine1449.magicplugin.Events;
 
 import com.github.ukraine1449.magicplugin.MagicPlugin;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -12,6 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class SnowBallHitEvent implements Listener {
+
     MagicPlugin plugin;
 
     public SnowBallHitEvent(MagicPlugin plugin) {
@@ -24,7 +24,6 @@ public class SnowBallHitEvent implements Listener {
             return;
         }else{
             Player player = event.getPlayer();
-            Location original = player.getLocation();
             if(player.getItemInHand().getItemMeta() == null){
                 return;
             }else{
@@ -38,55 +37,57 @@ public class SnowBallHitEvent implements Listener {
                         }
                     }else if(plugin.blocks.size() == 3){
                         if(!plugin.blocks.isEmpty() == true){
-                            if(plugin.blocks.size() == 3){
-                                Block one = plugin.blocks.get(1);
-                                Block two = plugin.blocks.get(1);
-                                Block three = plugin.blocks.get(1);
+                                if(plugin.blocks.size() == 3){
+                                    Location original = event.getPlayer().getLocation().add(0, -1, 0);
+                                    Block one = plugin.blocks.get(1);
+                                    Block two = plugin.blocks.get(1);
+                                    Block three = plugin.blocks.get(1);
 
-                                original.add(0, 0,0).getBlock().setType(one.getType());
+                                    original.add(0, 0,0).getBlock().setType(one.getType());
 
-                                original.add(0, 0,1).getBlock().setType(one.getType());
-                                original.add(0, 0,2).getBlock().setType(one.getType());
-                                original.add(0, 0,-1).getBlock().setType(one.getType());
-                                original.add(0, 0,-2).getBlock().setType(one.getType());
+                                    original.add(0, 0,1).getBlock().setType(one.getType());
+                                    original.add(0, 0,2).getBlock().setType(one.getType());
+                                    original.add(0, 0,-1).getBlock().setType(one.getType());
+                                    original.add(0, 0,-2).getBlock().setType(one.getType());
 
-                                original.add(1, 0,0).getBlock().setType(one.getType());
-                                original.add(2, 0,0).getBlock().setType(one.getType());
-                                original.add(-1, 0,0).getBlock().setType(one.getType());
-                                original.add(-2, 0,0).getBlock().setType(one.getType());
+                                    original.add(1, 0,0).getBlock().setType(one.getType());
+                                    original.add(2, 0,0).getBlock().setType(one.getType());
+                                    original.add(-1, 0,0).getBlock().setType(one.getType());
+                                    original.add(-2, 0,0).getBlock().setType(one.getType());
 
-                                original.add(-1, 0,-1).getBlock().setType(one.getType());
-                                original.add(-2, 0,-2).getBlock().setType(one.getType());
-                                original.add(-1, 0,-2).getBlock().setType(one.getType());
-                                original.add(-2, 0,-1).getBlock().setType(one.getType());
+                                    original.add(-1, 0,-1).getBlock().setType(one.getType());
+                                    original.add(-2, 0,-2).getBlock().setType(one.getType());
+                                    original.add(-1, 0,-2).getBlock().setType(one.getType());
+                                    original.add(-2, 0,-1).getBlock().setType(one.getType());
 
-                                original.add(1, 0,1).getBlock().setType(one.getType());
-                                original.add(2, 0,2).getBlock().setType(one.getType());
-                                original.add(1, 0,2).getBlock().setType(one.getType());
-                                original.add(2, 0,1).getBlock().setType(one.getType());
+                                    original.add(1, 0,1).getBlock().setType(one.getType());
+                                    original.add(2, 0,2).getBlock().setType(one.getType());
+                                    original.add(1, 0,2).getBlock().setType(one.getType());
+                                    original.add(2, 0,1).getBlock().setType(one.getType());
 
-                                original.add(-1, 0,1).getBlock().setType(one.getType());
-                                original.add(-2, 0,2).getBlock().setType(one.getType());
-                                original.add(-1, 0,2).getBlock().setType(one.getType());
-                                original.add(-2, 0,1).getBlock().setType(one.getType());
+                                    original.add(-1, 0,1).getBlock().setType(one.getType());
+                                    original.add(-2, 0,2).getBlock().setType(one.getType());
+                                    original.add(-1, 0,2).getBlock().setType(one.getType());
+                                    original.add(-2, 0,1).getBlock().setType(one.getType());
 
-                                original.add(1, 0,-1).getBlock().setType(one.getType());
-                                original.add(2, 0,-2).getBlock().setType(one.getType());
-                                original.add(1, 0,-2).getBlock().setType(one.getType());
-                                original.add(2, 0,-1).getBlock().setType(one.getType());
-
-
-
+                                    original.add(1, 0,-1).getBlock().setType(one.getType());
+                                    original.add(2, 0,-2).getBlock().setType(one.getType());
+                                    original.add(1, 0,-2).getBlock().setType(one.getType());
+                                    original.add(2, 0,-1).getBlock().setType(one.getType());
 
 
-                                original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
-                                original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
-                                original.add(0, 1,-1).getBlock().setType(Material.CHEST);
-                                original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
 
-                            }else{
-                                return;
-                            }
+
+
+                                    original.add(1, 1,1).getBlock().setType(Material.);
+                                    original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
+                                    original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
+                                    original.add(0, 1,-1).getBlock().setType(Material.CHEST);
+                                    original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
+
+                                }else{
+                                    return;
+                                }
                         }else{
                             return;
                         }
