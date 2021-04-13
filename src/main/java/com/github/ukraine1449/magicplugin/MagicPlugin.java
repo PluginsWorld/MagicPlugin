@@ -4,7 +4,6 @@ import com.github.ukraine1449.magicplugin.Commands.*;
 import com.github.ukraine1449.magicplugin.Events.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
