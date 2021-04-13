@@ -47,8 +47,10 @@ public class BootsFallEvent implements Listener {
                 }else{
                     return;
                 }
-            }else if (Helmet == null){
-                return;
+            }
+            if(Helmet.equals(ChatColor.LIGHT_PURPLE + "Porta-shield")) {
+                player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1200, 20));
+                player.getEquipment().setBoots(null);
             }else{
                 return;
             }
