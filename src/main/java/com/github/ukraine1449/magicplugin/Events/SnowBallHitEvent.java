@@ -145,7 +145,6 @@ public class SnowBallHitEvent implements Listener {
                             original.add(0, -1,-3).getBlock().setType(one.getType());
 
                             plugin.blocks.clear();
-                            event.setCancelled(true);
 
                         }else if(plugin.blocks.size() < 3){
                             Bukkit.broadcastMessage("2");
