@@ -58,8 +58,20 @@ public class BowEvent implements Listener {
                         if(target instanceof Player){
                             Player tp = (Player) target;
                             tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2));
+                        }else{
+                            return;
                         }
 
+                    }else if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
+                        Entity target = event.getEntity();
+                        if(target instanceof Player){
+                            Player tp = (Player) target;
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5));
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 200, 3));
+                        }else{
+                            return;
+                        }
                     }else{
                         return;
                     }
