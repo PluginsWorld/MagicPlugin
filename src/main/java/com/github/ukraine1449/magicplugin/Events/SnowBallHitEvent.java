@@ -1,6 +1,7 @@
 package com.github.ukraine1449.magicplugin.Events;
 
 import com.github.ukraine1449.magicplugin.MagicPlugin;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -9,10 +10,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.scheduler.BukkitRunnable;
+
+import java.util.ArrayList;
+import java.util.UUID;
 
 public class SnowBallHitEvent implements Listener {
-
     MagicPlugin plugin;
+    private final ArrayList<UUID> delay = new ArrayList<>();
 
     public SnowBallHitEvent(MagicPlugin plugin) {
         this.plugin = plugin;
@@ -24,78 +29,130 @@ public class SnowBallHitEvent implements Listener {
             return;
         }else{
             Player player = event.getPlayer();
+            Location original = player.getLocation();
             if(player.getItemInHand().getItemMeta() == null){
                 return;
             }else{
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                 if(mainhand.equals(ChatColor.DARK_GREEN + "Porta-house")){
-                    if(plugin.blocks.size() < 4){
-                        if(event.getClickedBlock() == null){
-                            return;
-                        }else{
-                            plugin.blocks.add(event.getClickedBlock());
-                        }
-                    }else if(plugin.blocks.size() == 3){
-                        if(!plugin.blocks.isEmpty() == true){
-                                if(plugin.blocks.size() == 3){
-                                    Location original = event.getPlayer().getLocation().add(0, -1, 0);
-                                    Block one = plugin.blocks.get(1);
-                                    Block two = plugin.blocks.get(1);
-                                    Block three = plugin.blocks.get(1);
-
-                                    original.add(0, 0,0).getBlock().setType(one.getType());
-
-                                    original.add(0, 0,1).getBlock().setType(one.getType());
-                                    original.add(0, 0,2).getBlock().setType(one.getType());
-                                    original.add(0, 0,-1).getBlock().setType(one.getType());
-                                    original.add(0, 0,-2).getBlock().setType(one.getType());
-
-                                    original.add(1, 0,0).getBlock().setType(one.getType());
-                                    original.add(2, 0,0).getBlock().setType(one.getType());
-                                    original.add(-1, 0,0).getBlock().setType(one.getType());
-                                    original.add(-2, 0,0).getBlock().setType(one.getType());
-
-                                    original.add(-1, 0,-1).getBlock().setType(one.getType());
-                                    original.add(-2, 0,-2).getBlock().setType(one.getType());
-                                    original.add(-1, 0,-2).getBlock().setType(one.getType());
-                                    original.add(-2, 0,-1).getBlock().setType(one.getType());
-
-                                    original.add(1, 0,1).getBlock().setType(one.getType());
-                                    original.add(2, 0,2).getBlock().setType(one.getType());
-                                    original.add(1, 0,2).getBlock().setType(one.getType());
-                                    original.add(2, 0,1).getBlock().setType(one.getType());
-
-                                    original.add(-1, 0,1).getBlock().setType(one.getType());
-                                    original.add(-2, 0,2).getBlock().setType(one.getType());
-                                    original.add(-1, 0,2).getBlock().setType(one.getType());
-                                    original.add(-2, 0,1).getBlock().setType(one.getType());
-
-                                    original.add(1, 0,-1).getBlock().setType(one.getType());
-                                    original.add(2, 0,-2).getBlock().setType(one.getType());
-                                    original.add(1, 0,-2).getBlock().setType(one.getType());
-                                    original.add(2, 0,-1).getBlock().setType(one.getType());
-
-
-
-
-
-                                    original.add(1, 1,1).getBlock().setType(Material.);
-                                    original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
-                                    original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
-                                    original.add(0, 1,-1).getBlock().setType(Material.CHEST);
-                                    original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
-
-                                }else{
-                                    return;
-                                }
-                        }else{
-                            return;
-                        }
-                    }else{
+                    if (delay.contains(player.getUniqueId())){
                         return;
+                    }else{
+                        Bukkit.broadcastMessage("1");
+                        if(plugin.blocks.size() == 3){
+                            Bukkit.broadcastMessage("4");
+                            Material one = Material.COBBLESTONE;
+                            delay.add(player.getUniqueId());
+                            new BukkitRunnable() {
+                                public void run() {
+                                    delay.remove(player.getUniqueId());
+                                }
+                            }.runTaskLater(plugin, 600);
+                            //Bottom level
+                            original.add(0, 0,0).getBlock().setType(one);
+
+                            original.add(0, 0,1).getBlock().setType(one);
+                            original.add(0, 0,-1);
+
+                            original.add(0, 0,2).getBlock().setType(one);
+                            original.add(0, 0,-2);
+
+                            original.add(0, 0,-1).getBlock().setType(one);
+                            original.add(0, 0,1);
+
+                            original.add(0, 0,-2).getBlock().setType(one);
+                            original.add(0, 0,2);
+
+                            original.add(1, 0,0).getBlock().setType(one);
+                            original.add(-1, 0,0);
+
+                            original.add(2, 0,0).getBlock().setType(one);
+                            original.add(-2, 0,0);
+
+                            original.add(-1, 0,0).getBlock().setType(one);
+                            original.add(1, 0,0);
+
+                            original.add(-2, 0,0).getBlock().setType(one);
+                            original.add(2, 0,0);
+
+                            original.add(-1, 0,-1).getBlock().setType(one);
+                            original.add(1, 0,1);
+
+                            original.add(-2, 0,-2).getBlock().setType(one);
+                            original.add(2, 0,2);
+
+                            original.add(-1, 0,-2).getBlock().setType(one);
+                            original.add(1, 0,2);
+
+                            original.add(-2, 0,-1).getBlock().setType(one);
+                            original.add(2, 0,1);
+
+                            original.add(1, 0,1).getBlock().setType(one);
+                            original.add(-1, 0,-1);
+
+                            original.add(2, 0,2).getBlock().setType(one);
+                            original.add(-2, 0,-2);
+
+                            original.add(1, 0,2).getBlock().setType(one);
+                            original.add(-1, 0,-2);
+
+                            original.add(2, 0,1).getBlock().setType(one);
+                            original.add(-2, 0,-1);
+
+                            original.add(-1, 0,1).getBlock().setType(one);
+                            original.add(1, 0,-1);
+
+                            original.add(-2, 0,2).getBlock().setType(one);
+                            original.add(2, 0,-2);
+
+                            original.add(-1, 0,2).getBlock().setType(one);
+                            original.add(1, 0,-2);
+
+                            original.add(-2, 0,1).getBlock().setType(one);
+                            original.add(2, 0,-1);
+
+                            original.add(1, 0,-1).getBlock().setType(one);
+                            original.add(-1, 0,1);
+
+                            original.add(2, 0,-2).getBlock().setType(one);
+                            original.add(-2, 0,2);
+
+                            original.add(1, 0,-2).getBlock().setType(one);
+                            original.add(-1, 0,2);
+
+                            original.add(2, 0,-1).getBlock().setType(one);
+                            original.add(-2, 0,1);
+
+
+
+
+                            //2nd level
+                            original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
+                            original.add(-1, -1,1).getBlock().setType(one);
+
+                            original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
+                            original.add(1, -1,1).getBlock().setType(one);
+
+                            original.add(0, 1,-1).getBlock().setType(Material.CHEST);
+                            original.add(0, -1,1).getBlock().setType(one);
+
+                            original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
+                            original.add(0, -1,-3).getBlock().setType(one);
+
+                            plugin.blocks.clear();
+
+                        }else if(plugin.blocks.size() < 3){
+                            Bukkit.broadcastMessage("2");
+                            if(event.getClickedBlock() == null){
+                                return;
+                            }else{
+                                Bukkit.broadcastMessage("3");
+                                plugin.blocks.add(event.getClickedBlock());
+                            }
+                        }else{
+                            return;
+                        }
                     }
-                }else if (mainhand == null){
-                    return;
                 }else{
                     return;
                 }
