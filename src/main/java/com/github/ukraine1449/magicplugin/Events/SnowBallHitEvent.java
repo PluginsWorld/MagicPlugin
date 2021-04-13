@@ -1,54 +1,105 @@
 package com.github.ukraine1449.magicplugin.Events;
 
+import com.github.ukraine1449.magicplugin.MagicPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
-import org.bukkit.entity.Arrow;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.ProjectileHitEvent;
-
-import java.util.List;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 public class SnowBallHitEvent implements Listener {
 
+    MagicPlugin plugin;
+
+    public SnowBallHitEvent(MagicPlugin plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler
-    public void onBowHit(ProjectileHitEvent event){
+    public void onHouseClick(PlayerInteractEvent event) {
+        if (event == null){
+            return;
+        }else{
+            Player player = event.getPlayer();
+            if(player.getItemInHand().getItemMeta() == null){
+                return;
+            }else{
+                String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
+                if(mainhand.equals(ChatColor.DARK_GREEN + "Porta-house")){
+                    if(plugin.blocks.size() < 4){
+                        if(event.getClickedBlock() == null){
+                            return;
+                        }else{
+                            plugin.blocks.add(event.getClickedBlock());
+                        }
+                    }else if(plugin.blocks.size() == 3){
+                        if(!plugin.blocks.isEmpty() == true){
+                                if(plugin.blocks.size() == 3){
+                                    Location original = event.getPlayer().getLocation().add(0, -1, 0);
+                                    Block one = plugin.blocks.get(1);
+                                    Block two = plugin.blocks.get(1);
+                                    Block three = plugin.blocks.get(1);
 
-        if(event.getEntity() instanceof Snowball){
-            if(event.getEntity().getShooter() instanceof Player){
-                Player player = (Player) event.getEntity().getShooter();
+                                    original.add(0, 0,0).getBlock().setType(one.getType());
 
-                if(player.getItemInHand().getItemMeta() == null){
-                    return;
-                }else{
-                    if(((Snowball) event.getEntity()).getItem().getItemMeta().getDisplayName() == ChatColor.DARK_GREEN + "Porta-house"){
-                     Location original = event.getHitBlock().getLocation();
-                     original.getBlock().setType(Material.COBBLESTONE);
+                                    original.add(0, 0,1).getBlock().setType(one.getType());
+                                    original.add(0, 0,2).getBlock().setType(one.getType());
+                                    original.add(0, 0,-1).getBlock().setType(one.getType());
+                                    original.add(0, 0,-2).getBlock().setType(one.getType());
 
-                     Location zpo = original.add(0, 0, 1);
-                     zpo.getBlock().setType(Material.COBBLESTONE);
+                                    original.add(1, 0,0).getBlock().setType(one.getType());
+                                    original.add(2, 0,0).getBlock().setType(one.getType());
+                                    original.add(-1, 0,0).getBlock().setType(one.getType());
+                                    original.add(-2, 0,0).getBlock().setType(one.getType());
 
-                     original.add(0, 0,2).getBlock().setType(Material.COBBLESTONE);
-                     original.add(0, 0,2).getBlock().setType(Material.COBBLESTONE);
+                                    original.add(-1, 0,-1).getBlock().setType(one.getType());
+                                    original.add(-2, 0,-2).getBlock().setType(one.getType());
+                                    original.add(-1, 0,-2).getBlock().setType(one.getType());
+                                    original.add(-2, 0,-1).getBlock().setType(one.getType());
+
+                                    original.add(1, 0,1).getBlock().setType(one.getType());
+                                    original.add(2, 0,2).getBlock().setType(one.getType());
+                                    original.add(1, 0,2).getBlock().setType(one.getType());
+                                    original.add(2, 0,1).getBlock().setType(one.getType());
+
+                                    original.add(-1, 0,1).getBlock().setType(one.getType());
+                                    original.add(-2, 0,2).getBlock().setType(one.getType());
+                                    original.add(-1, 0,2).getBlock().setType(one.getType());
+                                    original.add(-2, 0,1).getBlock().setType(one.getType());
+
+                                    original.add(1, 0,-1).getBlock().setType(one.getType());
+                                    original.add(2, 0,-2).getBlock().setType(one.getType());
+                                    original.add(1, 0,-2).getBlock().setType(one.getType());
+                                    original.add(2, 0,-1).getBlock().setType(one.getType());
 
 
+
+
+
+                                    original.add(1, 1,1).getBlock().setType(Material.);
+                                    original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
+                                    original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
+                                    original.add(0, 1,-1).getBlock().setType(Material.CHEST);
+                                    original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
+
+                                }else{
+                                    return;
+                                }
+                        }else{
+                            return;
+                        }
                     }else{
                         return;
                     }
+                }else if (mainhand == null){
+                    return;
+                }else{
+                    return;
                 }
-            }else{
-                return;
             }
-        }else{
-            return;
         }
-
-
-
     }
-
 }
