@@ -39,8 +39,6 @@ public class SnowBallHitEvent implements Listener {
                         return;
                     }else{
                         Bukkit.broadcastMessage("1");
-                        if(plugin.blocks.size() == 3){
-                            Bukkit.broadcastMessage("4");
                             Material one = Material.COBBLESTONE;
                             delay.add(player.getUniqueId());
                             new BukkitRunnable() {
@@ -128,30 +126,19 @@ public class SnowBallHitEvent implements Listener {
 
                             //2nd level
                             original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
-                            original.add(-1, -1,1).getBlock().setType(one);
+                            original.add(-1, -1,1);
 
                             original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
-                            original.add(1, -1,1).getBlock().setType(one);
+                            original.add(1, -1,1);
 
                             original.add(0, 1,-1).getBlock().setType(Material.CHEST);
-                            original.add(0, -1,1).getBlock().setType(one);
+                            original.add(0, -1,1);
 
-                            original.add(0, 1,3).getBlock().setType(Material.OAK_DOOR);
-                            original.add(0, -1,-3).getBlock().setType(one);
+                            original.add(0, 1,2).getBlock().setType(Material.OAK_DOOR);
+                            original.add(0, -1,-3);
 
                             plugin.blocks.clear();
 
-                        }else if(plugin.blocks.size() < 3){
-                            Bukkit.broadcastMessage("2");
-                            if(event.getClickedBlock() == null){
-                                return;
-                            }else{
-                                Bukkit.broadcastMessage("3");
-                                plugin.blocks.add(event.getClickedBlock());
-                            }
-                        }else{
-                            return;
-                        }
                     }
                 }else{
                     return;
