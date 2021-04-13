@@ -17,13 +17,11 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new HammerEvent(), this);
         getServer().getPluginManager().registerEvents(new ShieldEvent(), this);
         getServer().getPluginManager().registerEvents(new BowEvent(), this);
-        getServer().getPluginManager().registerEvents(new ESPHelmet(), this);
         getServer().getPluginManager().registerEvents(new ShearsEvent(), this);
         getServer().getPluginManager().registerEvents(new ScytheEvent(), this);
         getServer().getPluginManager().registerEvents(new ExplosiveBowEvent(), this);
         getServer().getPluginManager().registerEvents(new InvisEvent(this), this);
         getServer().getPluginManager().registerEvents(new ZeusBowEvent(), this);
-        getServer().getPluginManager().registerEvents(new VestEvent(), this);
         getServer().getPluginManager().registerEvents(new BoomStickEvent(), this);
         getServer().getPluginManager().registerEvents(new VestBigEvent(), this);
         getServer().getPluginManager().registerEvents(new BootsFallEvent(), this);

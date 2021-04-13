@@ -32,8 +32,15 @@ public class VestBigEvent implements Listener {
 
 
 
-            }else if (Chestplate == null){
-                return;
+            }else if(Chestplate.equals(ChatColor.RED + "Suicide bomber vest")){
+                World w = player.getWorld();
+                Location loc = player.getLocation();
+                w.createExplosion(loc, 10, true);
+                if(player.getEquipment().getChestplate() == null){
+                    return;
+                }else{
+                    player.getEquipment().setChestplate(null);
+                }
             }else{
                 return;
             }
