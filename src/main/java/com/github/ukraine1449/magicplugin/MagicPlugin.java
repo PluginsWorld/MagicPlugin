@@ -24,7 +24,6 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ExplosiveBowEvent(), this);
         getServer().getPluginManager().registerEvents(new InvisEvent(this), this);
         getServer().getPluginManager().registerEvents(new ZeusBowEvent(), this);
-        getServer().getPluginManager().registerEvents(new MineEvent(), this);
         getServer().getPluginManager().registerEvents(new VestEvent(), this);
         getServer().getPluginManager().registerEvents(new BoomStickEvent(), this);
         getServer().getPluginManager().registerEvents(new VestBigEvent(), this);
@@ -33,7 +32,6 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SlowStickEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeathEvent(), this);
         getServer().getPluginManager().registerEvents(new LevitationBootsEvent(), this);
-        getServer().getPluginManager().registerEvents(new onMinePlace(), this);
 
 
 
@@ -46,7 +44,6 @@ public final class MagicPlugin extends JavaPlugin {
         getCommand("Vest").setExecutor(new Vest());
         getCommand("BoomStick").setExecutor(new BoomStick());
         getCommand("Zeus").setExecutor(new ZeusBow());
-        getCommand("Mine").setExecutor(new Mine());
         getCommand("invis").setExecutor(new Invis());
         getCommand("boombow").setExecutor(new ExplosiveBow());
         getCommand("scythe").setExecutor(new Scythe());

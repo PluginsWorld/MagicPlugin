@@ -25,8 +25,6 @@ commands:
     description: Gives invisibility armor
   zeus:
     description: Gives you zeuses bow
-  Mine:
-    description: Gives you a mine
   BoomStick:
     description: Gives you an explosive stick
   Vest:
@@ -39,7 +37,5 @@ commands:
     description: Gives you an explosive pickaxe
   slowStick:
     description: gives you stick to make people slow
-  wings:
+  wiwwngs:
     description: gives you wings
-  house:
-    description: An instant house
