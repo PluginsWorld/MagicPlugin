@@ -32,10 +32,13 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SlowStickEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeathEvent(), this);
         getServer().getPluginManager().registerEvents(new LevitationBootsEvent(), this);
+        getServer().getPluginManager().registerEvents(new TPBEvent(), this);
+        getServer().getPluginManager().registerEvents(new ShieldArmEvent(), this);
 
 
 
-
+        getCommand("tshield").setExecutor(new ShieldArm());
+        getCommand("tpbow").setExecutor(new TPbow());
         getCommand("wings").setExecutor(new LevitationBoots());
         getCommand("slowStick").setExecutor(new SlowStick());
         getCommand("Pickaxe").setExecutor(new PickAxe());

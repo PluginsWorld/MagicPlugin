@@ -39,3 +39,7 @@ commands:
     description: gives you stick to make people slow
   wings:
     description: gives you wings
+  tpbow:
+    description: teleports you to wherever you hit
+  tshield:
+    description: A temporary supershield
