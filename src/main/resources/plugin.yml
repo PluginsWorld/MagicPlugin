@@ -43,3 +43,7 @@ commands:
     description: teleports you to wherever you hit
   tshield:
     description: A temporary supershield
+  nuke:
+    description: A FUCKING NUKE
+  meteor:
+    description: Gives you the bow to summon meteorites

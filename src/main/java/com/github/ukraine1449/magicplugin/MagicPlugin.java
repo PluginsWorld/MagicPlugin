@@ -34,9 +34,11 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new LevitationBootsEvent(), this);
         getServer().getPluginManager().registerEvents(new TPBEvent(), this);
         getServer().getPluginManager().registerEvents(new ShieldArmEvent(), this);
+        getServer().getPluginManager().registerEvents(new NukeEvent(), this);
+        getServer().getPluginManager().registerEvents(new MeteorEvent(this), this);
 
-
-
+        getCommand("meteor").setExecutor(new Meteors());
+        getCommand("nuke").setExecutor(new Nuke());
         getCommand("tshield").setExecutor(new ShieldArm());
         getCommand("tpbow").setExecutor(new TPbow());
         getCommand("wings").setExecutor(new LevitationBoots());
