@@ -2,6 +2,7 @@ package com.github.ukraine1449.magicplugin.Events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -26,6 +27,16 @@ public class TPBEvent implements Listener {
                         Location loc = event.getEntity().getLocation();
                         player.teleport(loc);
 
+                    }else if(mainhand.equals(ChatColor.BOLD + "Zeus's bow")){
+
+                        World w = player.getWorld();
+                        if(event.getHitBlock() == null){
+                            return;
+                        }else{
+                            Location loc = event.getHitBlock().getLocation();
+                            w.strikeLightning(loc);
+                            event.getEntity().remove();
+                        }
                     }else{
                         return;
                     }
