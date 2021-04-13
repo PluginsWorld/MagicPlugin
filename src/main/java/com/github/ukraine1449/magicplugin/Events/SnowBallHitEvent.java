@@ -128,6 +128,15 @@ public class SnowBallHitEvent implements Listener {
                             original.add(1, 1,-1).getBlock().setType(Material.CRAFTING_TABLE);
                             original.add(-1, -1,1);
 
+                            original.add(1, 1,0).getBlock().setType(Material.BLUE_BED);
+                            original.add(-1, -1, 0);
+
+                            original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
+                            original.add(1, -1,1);
+
+                            original.add(-1, 1,0).getBlock().setType(Material.CHEST);
+                            original.add(1, -1,0);
+
                             original.add(-1, 1,-1).getBlock().setType(Material.CHEST);
                             original.add(1, -1,1);
 
@@ -137,7 +146,24 @@ public class SnowBallHitEvent implements Listener {
                             original.add(0, 1,2).getBlock().setType(Material.OAK_DOOR);
                             original.add(0, -1,-3);
 
-                            plugin.blocks.clear();
+                            original.add(0, 1,-2).getBlock().setType(Material.OAK_PLANKS);
+                            original.add(0, -1,2);
+
+                        original.add(-1, 1,-2).getBlock().setType(Material.OAK_PLANKS);
+                        original.add(1, -1,2);
+
+                        original.add(1, 1,-2).getBlock().setType(Material.OAK_PLANKS);
+                        original.add(-1, -1,2);
+
+                        original.add(2, 1,-1).getBlock().setType(Material.OAK_PLANKS);
+                        original.add(-2, -1,1);
+
+                        original.add(-2, 1,-1).getBlock().setType(Material.OAK_PLANKS);
+                        original.add(2, -1,1);
+
+                        original.add(2, 1,0).getBlock().setType(Material.OAK_PLANKS);
+                        original.add(-2, -1,0);
+
 
                     }
                 }else{
