@@ -1,6 +1,8 @@
 package com.github.ukraine1449.magicplugin.Events;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
@@ -43,6 +45,19 @@ public class BowEvent implements Listener {
                             player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 120, 10));
                         }else{
                             return;
+                        }
+
+                    }else if(mainhand.equals(ChatColor.RED + "Boom Stick")){
+
+                        World w = player.getWorld();
+                        Location loc = event.getEntity().getLocation();
+                        w.createExplosion(loc, 2, false);
+                        player.getEquipment().setItemInMainHand(null);
+                    }else if(mainhand.equals(ChatColor.BOLD + "Feet whacker")){
+                        Entity target = event.getEntity();
+                        if(target instanceof Player){
+                            Player tp = (Player) target;
+                            tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2));
                         }
 
                     }else{
