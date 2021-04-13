@@ -37,5 +37,5 @@ commands:
     description: Gives you an explosive pickaxe
   slowStick:
     description: gives you stick to make people slow
-  wiwwngs:
+  wings:
     description: gives you wings
