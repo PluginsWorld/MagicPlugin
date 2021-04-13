@@ -31,7 +31,7 @@ public class SnowBallHitEvent implements Listener {
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                 if(mainhand.equals(ChatColor.DARK_GREEN + "Porta-house")){
                     Bukkit.broadcastMessage("1");
-                    if(plugin.blocks.size() < 3){
+                    if(plugin.blocks.size() < 4){
                         Bukkit.broadcastMessage("2");
                         if(event.getClickedBlock() == null){
                             return;
@@ -39,11 +39,11 @@ public class SnowBallHitEvent implements Listener {
                             Bukkit.broadcastMessage("3");
                             plugin.blocks.add(event.getClickedBlock());
                         }
-                    }else if(plugin.blocks.size() == 2){
+                    }else if(plugin.blocks.size() == 3){
                         Bukkit.broadcastMessage("4");
-                                Block one = plugin.blocks.get(0);
-                                Block two = plugin.blocks.get(1);
-                                Block three = plugin.blocks.get(2);
+                                Block one = plugin.blocks.get(1);
+                                Block two = plugin.blocks.get(2);
+                                Block three = plugin.blocks.get(3);
                                 //Bottom level
                                 original.add(0, 0,0).getBlock().setType(one.getType());
 
@@ -136,6 +136,7 @@ public class SnowBallHitEvent implements Listener {
                                 original.add(0, -1,-3).getBlock().setType(one.getType());
 
                     }else{
+                        Bukkit.broadcastMessage("10");
                         return;
                     }
                 }else if (mainhand == null){
