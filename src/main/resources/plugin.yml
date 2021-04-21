@@ -9,41 +9,80 @@ commands:
   hammer:
     description: gives you the "Fuck you" hammer
     permission: Magic.hammer
+    permission-message: Please get the permission called; Magic.spawnHammer
   shield:
     description: gives you the shield of darknesss
+    permission-message: Please get the permission called; Magic.spawnShield
+    permission: Magic.spawnShield
   bow:
     description: gives you Cupids bow
+    permission-message: Please get the permission called; Magic.Bow
+    permission: Magic.Bow
   EH:
     description: Helmet that lets you see people within 10 blocks
+    permission-message: Please get the permission called; Magic.EH
+    permission: Magic.EH
   shears:
     description: gives you the shears of head cutting
+    permission-message: Please get the permission called; Magic.Guillotine
+    permission: Magic.Guillotine
   scythe:
     description: gives you deaths scythe
+    permission-message: Please get the permission called; Magic.scythe
+    permission: Magic.scythe
   boombow:
     description: gives you a bow which explodes stuff
+    permission-message: Please get the permission called; Magic.ExB
+    permission: Magic.ExB
   invis:
     description: Gives invisibility armor
+    permission-message: Please get the permission called; Magic.invis
+    permission: Magic.invis
   zeus:
     description: Gives you zeuses bow
+    permission-message: Please get the permission called; Magic.Zeus
+    permission: Magic.Zeus
   BoomStick:
     description: Gives you an explosive stick
+    permission-message: Please get the permission called; Magic.BoomStick
+    permission: Magic.BoomStick
   Vest:
     description: gives you the suicide bomber vest
+    permission-message: Please get the permission called; Magic.vest
+    permission: Magic.vest
   vestBig:
     description: A bigger suicide bomber vest
+    permission-message: Please get the permission called; Magic.vest
+    permission: Magic.vest
   boots:
     description: gives you slow falling boots
+    permission-message: Please get the permission called; Magic.Pillow
+    permission: Magic.Pillow
   pickaxe:
     description: Gives you an explosive pickaxe
+    permission-message: Please get the permission called; Magic.Pickaxe
+    permission: Magic.Pickaxe
   slowStick:
     description: gives you stick to make people slow
+    permission-message: Please get the permission called; Magic.slowstick
+    permission: Magic.slowstick
   wings:
     description: gives you wings
+    permission-message: Please get the permission called; Magic.Flying
+    permission: Magic.Flying
   tpbow:
     description: teleports you to wherever you hit
+    permission-message: Please get the permission called; Magic.TPB
+    permission: Magic.TPB
   tshield:
     description: A temporary supershield
+    permission-message: Please get the permission called; Magic.supershield
+    permission: Magic.supershield
   nuke:
     description: A FUCKING NUKE
+    permission-message: Please get the permission called; Magic.Nuke
+    permission: Magic.Nuke
   meteor:
     description: Gives you the bow to summon meteorites
+    permission-message: Please get the permission called; Magic.Meteor
+    permission: Magic.Meteor

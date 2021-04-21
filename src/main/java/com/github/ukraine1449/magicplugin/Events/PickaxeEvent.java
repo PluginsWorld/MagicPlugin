@@ -15,7 +15,6 @@ public class PickaxeEvent implements Listener {
     @EventHandler
     public static void onBlockBreak(BlockBreakEvent event){
             Player player = event.getPlayer();
-        System.out.println("Test 2");
         if(player.getItemInHand().getItemMeta() == null){
                 return;
             }else{
