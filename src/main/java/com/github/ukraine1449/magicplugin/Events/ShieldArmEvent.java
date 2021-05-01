@@ -11,7 +11,7 @@ import org.bukkit.potion.PotionEffectType;
 public class ShieldArmEvent implements Listener {
 
     @EventHandler
-    public void EH(PlayerMoveEvent event){
+    public void portashield(PlayerMoveEvent event){
         Player player = event.getPlayer();
         if(player.getEquipment().getBoots() == null){
             return;

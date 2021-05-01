@@ -8,7 +8,6 @@ import org.bukkit.event.Listener;
 public class PlayerJoinEvent implements Listener {
 MagicPlugin plugin;
 
-
     public PlayerJoinEvent(MagicPlugin plugin) {
         this.plugin = plugin;
     }

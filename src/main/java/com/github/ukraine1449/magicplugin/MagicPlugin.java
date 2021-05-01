@@ -19,23 +19,19 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new BowEvent(), this);
         getServer().getPluginManager().registerEvents(new ShearsEvent(), this);
         getServer().getPluginManager().registerEvents(new ExplosiveBowEvent(), this);
-        getServer().getPluginManager().registerEvents(new InvisEvent(this), this);
         getServer().getPluginManager().registerEvents(new BoomStickEvent(), this);
         getServer().getPluginManager().registerEvents(new VestBigEvent(), this);
         getServer().getPluginManager().registerEvents(new BootsFallEvent(), this);
         getServer().getPluginManager().registerEvents(new PickaxeEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeathEvent(), this);
-        getServer().getPluginManager().registerEvents(new LevitationBootsEvent(), this);
         getServer().getPluginManager().registerEvents(new TPBEvent(), this);
         getServer().getPluginManager().registerEvents(new ShieldArmEvent(), this);
-        getServer().getPluginManager().registerEvents(new NukeEvent(), this);
         getServer().getPluginManager().registerEvents(new MeteorEvent(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerDamagePlayer(), this);
 
         getCommand("meteor").setExecutor(new Meteors());
-        getCommand("nuke").setExecutor(new Nuke());
         getCommand("tshield").setExecutor(new ShieldArm());
         getCommand("tpbow").setExecutor(new TPbow());
-        getCommand("wings").setExecutor(new LevitationBoots());
         getCommand("slowStick").setExecutor(new SlowStick());
         getCommand("Pickaxe").setExecutor(new PickAxe());
         getCommand("boots").setExecutor(new PillowBoots());
@@ -43,11 +39,9 @@ public final class MagicPlugin extends JavaPlugin {
         getCommand("Vest").setExecutor(new Vest());
         getCommand("BoomStick").setExecutor(new BoomStick());
         getCommand("Zeus").setExecutor(new ZeusBow());
-        getCommand("invis").setExecutor(new Invis());
         getCommand("boombow").setExecutor(new ExplosiveBow());
         getCommand("scythe").setExecutor(new Scythe());
         getCommand("shears").setExecutor(new HeadCutterShears());
-        getCommand("EH").setExecutor(new HelmetOfVision());
         getCommand("hammer").setExecutor(new Hammer());
         getCommand("shield").setExecutor(new Shield());
         getCommand("bow").setExecutor(new Bow());

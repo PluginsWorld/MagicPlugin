@@ -27,7 +27,7 @@ public class HammerEvent implements Listener {
                 return;
             }else{
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
-                if(mainhand.equals(ChatColor.RED + "The great fuck you hammer")){
+                if(mainhand.equals(ChatColor.RED + "Slammer")){
                     List<Entity> entities = player.getNearbyEntities(3, 2, 3);
                     if(!entities.isEmpty()){
                         for(int i = 0; entities.size() > i; i++){

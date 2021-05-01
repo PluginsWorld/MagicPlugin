@@ -28,9 +28,6 @@ public class ShearsEvent implements Listener {
                     phm.setOwningPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()));
                     playerhead.setItemMeta(phm);
                     killer.getInventory().addItem(playerhead);
-
-
-
                 }else if (mainhand == null){
                     return;
                 }else{

@@ -21,7 +21,7 @@ public class Hammer implements CommandExecutor {
             if(player.hasPermission("Magic.spawnHammer")){
                 ItemStack hammer = new ItemStack(Material.WOODEN_AXE);
                 ItemMeta hm = hammer.getItemMeta();
-                hm.setDisplayName(ChatColor.RED + "The great fuck you hammer");
+                hm.setDisplayName(ChatColor.RED + "Slammer");
                 ArrayList<String> lore = new ArrayList();
                 lore.add(ChatColor.DARK_GREEN + "The hammer of the gods. Damages everything in a small radius around you");
                 hm.setLore(lore);

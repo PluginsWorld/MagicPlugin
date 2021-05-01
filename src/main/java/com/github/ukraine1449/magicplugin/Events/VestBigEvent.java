@@ -22,12 +22,12 @@ public class VestBigEvent implements Listener {
 
                 World w = player.getWorld();
                 Location loc = player.getLocation();
-                w.createExplosion(loc, 15, true);
                 if(player.getEquipment().getChestplate() == null){
                     return;
                 }else{
                     player.getEquipment().setChestplate(null);
                 }
+                w.createExplosion(loc, 15, true);
 
 
 
@@ -35,12 +35,12 @@ public class VestBigEvent implements Listener {
             }else if(Chestplate.equals(ChatColor.RED + "Suicide bomber vest")){
                 World w = player.getWorld();
                 Location loc = player.getLocation();
-                w.createExplosion(loc, 10, true);
                 if(player.getEquipment().getChestplate() == null){
                     return;
                 }else{
                     player.getEquipment().setChestplate(null);
                 }
+                w.createExplosion(loc, 10, true);
             }else{
                 return;
             }

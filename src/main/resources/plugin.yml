@@ -18,10 +18,6 @@ commands:
     description: gives you Cupids bow
     permission-message: Please get the permission called; Magic.Bow
     permission: Magic.Bow
-  EH:
-    description: Helmet that lets you see people within 10 blocks
-    permission-message: Please get the permission called; Magic.EH
-    permission: Magic.EH
   shears:
     description: gives you the shears of head cutting
     permission-message: Please get the permission called; Magic.Guillotine
@@ -34,10 +30,6 @@ commands:
     description: gives you a bow which explodes stuff
     permission-message: Please get the permission called; Magic.ExB
     permission: Magic.ExB
-  invis:
-    description: Gives invisibility armor
-    permission-message: Please get the permission called; Magic.invis
-    permission: Magic.invis
   zeus:
     description: Gives you zeuses bow
     permission-message: Please get the permission called; Magic.Zeus
@@ -66,10 +58,6 @@ commands:
     description: gives you stick to make people slow
     permission-message: Please get the permission called; Magic.slowstick
     permission: Magic.slowstick
-  wings:
-    description: gives you wings
-    permission-message: Please get the permission called; Magic.Flying
-    permission: Magic.Flying
   tpbow:
     description: teleports you to wherever you hit
     permission-message: Please get the permission called; Magic.TPB
@@ -78,10 +66,6 @@ commands:
     description: A temporary supershield
     permission-message: Please get the permission called; Magic.supershield
     permission: Magic.supershield
-  nuke:
-    description: A FUCKING NUKE
-    permission-message: Please get the permission called; Magic.Nuke
-    permission: Magic.Nuke
   meteor:
     description: Gives you the bow to summon meteorites
     permission-message: Please get the permission called; Magic.Meteor

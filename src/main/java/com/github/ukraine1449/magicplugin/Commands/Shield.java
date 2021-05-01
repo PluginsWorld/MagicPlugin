@@ -23,7 +23,7 @@ public class Shield implements CommandExecutor {
             if(player.hasPermission("Magic.spawnShield")){
                 ItemStack shield = new ItemStack(Material.SHIELD);
                 ItemMeta sm = shield.getItemMeta();
-                sm.setDisplayName(ChatColor.BLACK + "The shield of darkness");
+                sm.setDisplayName(ChatColor.DARK_BLUE + "The shield of darkness");
                 ArrayList<String> lore = new ArrayList();
                 lore.add(ChatColor.BLUE + "The unstoppable shield of darnkess");
                 lore.add(ChatColor.BLUE + "Hit a player and it will poison them");

@@ -22,7 +22,7 @@ public class Scythe implements CommandExecutor {
             if(player.hasPermission("Magic.scythe")){
                 ItemStack scythe = new ItemStack(Material.NETHERITE_HOE);
                 ItemMeta sm = scythe.getItemMeta();
-                sm.setDisplayName(ChatColor.BLACK + "Death's scythe");
+                sm.setDisplayName(ChatColor.DARK_BLUE + "Death's scythe");
                 ArrayList<String> lore = new ArrayList();
                 lore.add(ChatColor.BLUE + "Hit someone with this to give them blindness and withering");
                 sm.setLore(lore);

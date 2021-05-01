@@ -35,6 +35,15 @@ public class ExplosiveBowEvent implements Listener {
 
 
 
+                    }else if(mainhand.equals(ChatColor.BOLD + "Zeus's bow")){
+                        World w = player.getWorld();
+                        if(event.getHitBlock() == null){
+                            return;
+                        }else{
+                            Location loc = event.getHitBlock().getLocation();
+                            w.strikeLightning(loc);
+                            event.getEntity().remove();
+                        }
                     }else{
                         return;
                     }

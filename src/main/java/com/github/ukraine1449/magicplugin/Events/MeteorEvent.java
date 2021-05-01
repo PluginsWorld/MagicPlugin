@@ -33,23 +33,16 @@ MagicPlugin plugin;
                     String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
                     if(mainhand.equals(ChatColor.BOLD + "Meteor bow")){
                         Random random = new Random();
-                        Bukkit.getScheduler().runTaskLater(plugin, () -> {
                             for(int i = random.nextInt();i < 11; i++){
                                 ArmorStand stand = (ArmorStand) player.getWorld().spawnEntity(event.getEntity().getLocation().add(0,10,0), EntityType.ARMOR_STAND);
                                 stand.setInvisible(true);
                                 ItemStack met = new ItemStack(Material.PLAYER_HEAD);
                                 stand.setHelmet(met);
-                                Bukkit.getScheduler().runTaskLater(plugin, () -> {
                                     World w = player.getWorld();
                                     Location loc = player.getLocation();
                                     w.createExplosion(loc, 3, true);
                                     stand.remove();
-                                }, 200L);
-                            }                        }, 600L);
-
-
-
-
+                            }
                     }else{
                         return;
                     }
