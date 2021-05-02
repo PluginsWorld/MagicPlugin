@@ -26,10 +26,8 @@ public final class MagicPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerDeathEvent(), this);
         getServer().getPluginManager().registerEvents(new TPBEvent(), this);
         getServer().getPluginManager().registerEvents(new ShieldArmEvent(), this);
-        getServer().getPluginManager().registerEvents(new MeteorEvent(this), this);
         getServer().getPluginManager().registerEvents(new PlayerDamagePlayer(), this);
 
-        getCommand("meteor").setExecutor(new Meteors());
         getCommand("tshield").setExecutor(new ShieldArm());
         getCommand("tpbow").setExecutor(new TPbow());
         getCommand("slowStick").setExecutor(new SlowStick());

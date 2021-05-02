@@ -1,5 +1,6 @@
 package com.github.ukraine1449.magicplugin.Events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -16,15 +17,13 @@ public class PlayerDamagePlayer implements Listener {
 
     @EventHandler
     public static void onPlayerDamagePlayer(EntityDamageByEntityEvent event){
-
         if(event.getDamager() instanceof Player){
-
             if(event.getEntity() instanceof Player){
                 Player player = (Player) event.getDamager();
                 String mainhand = player.getItemInHand().getItemMeta().getDisplayName();
 
 
-                if(mainhand.equals(ChatColor.BLACK + "Death's scythe")){
+                if(mainhand.equals(ChatColor.DARK_BLUE + "Death's scythe")){
                     Entity target = event.getEntity();
                     if(target instanceof Player){
                         Player tp = (Player) target;
@@ -36,7 +35,6 @@ public class PlayerDamagePlayer implements Listener {
                     }
 
                 }else if(mainhand.equals(ChatColor.RED + "Boom Stick")){
-
                     World w = player.getWorld();
                     Location loc = event.getEntity().getLocation();
                     w.createExplosion(loc, 2, false);
@@ -50,7 +48,7 @@ public class PlayerDamagePlayer implements Listener {
                         tp.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 2));
                     }
 
-                }else if(mainhand.equals(ChatColor.BLACK + "The shield of darkness")){
+                }else if(mainhand.equals(ChatColor.DARK_BLUE + "The shield of darkness")){
                     Entity target = event.getEntity();
                     if(target instanceof Player){
                         Player tp = (Player) target;

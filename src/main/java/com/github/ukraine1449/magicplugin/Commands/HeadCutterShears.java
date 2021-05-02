@@ -27,7 +27,7 @@ public class HeadCutterShears implements CommandExecutor {
                 ArrayList<String> lore = new ArrayList();
                 lore.add(ChatColor.DARK_PURPLE + "The french Guillotine");
                 lore.add(ChatColor.DARK_PURPLE + "Kill someone with this to get their head");
-                shears.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 3);
+                shears.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 6);
                 bm.setLore(lore);
                 shears.setItemMeta(bm);
                 Inventory playerinv = player.getInventory();
